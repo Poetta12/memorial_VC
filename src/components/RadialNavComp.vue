@@ -43,10 +43,9 @@ const navigateTo = (route) => {
 </script>
 
 <style scoped>
+/* Styles de base pour la navigation radiale */
 .radial-nav {
   position: relative;
-  width: 100px;
-  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,14 +55,16 @@ const navigateTo = (route) => {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #333;
+  background-color: #f5f5dc; /* Couleur beige */
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Ajout de la transition pour l'ombre */
   position: relative;
   z-index: 1000;
+  border: 4px solid rgba(255, 215, 0, 0.8); /* Bordure lumineuse en doré */
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5), 0 0 30px rgba(173, 216, 230, 0.7); /* Ombre céleste */
 }
 
 .center-logo {
@@ -78,6 +79,7 @@ const navigateTo = (route) => {
   display: none; /* Masqué par défaut */
   align-items: center;
   justify-content: center;
+  background: transparent; /* Enlève le fond ici, car il est géré par les icônes */
 }
 
 .menu.active {
@@ -88,30 +90,31 @@ const navigateTo = (route) => {
   position: absolute;
   width: 60px;
   height: 60px;
-  background-color: #444;
-  color: white;
+  background: linear-gradient(135deg, rgba(173, 216, 230, 0.8), rgba(255, 255, 255, 0.3)); /* Dégradé céleste */
+  color: #333;
+  font-weight: bolder;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   font-size: 1.5rem;
-  transition: transform 0.8s;
-  transform: translate(-50%, -50%) rotate(calc(45deg * var(--i))) translateX(100px);
+  transition: transform 0.8s, box-shadow 0.3s; /* Ajoute une transition pour l'ombre */
+  border: 2px solid rgba(255, 215, 0, 0.8); /* Bordure lumineuse pour les icônes */
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(173, 216, 230, 0.7); /* Ombre céleste pour les icônes */
 }
 
-.menu-item:hover {
-  background-color: #666;
-}
-
-.menu-item svg {
-  width: 35px;
-  height: 35px;
-  color: white;
-}
-
+/* Positions spécifiques pour chaque icône en mobile */
 .menu-item:nth-child(1) { transform: rotate(-190deg) translate(100px) rotate(-170deg); }
 .menu-item:nth-child(2) { transform: rotate(-150deg) translate(100px) rotate(-210deg); }
 .menu-item:nth-child(3) { transform: rotate(-108deg) translate(100px) rotate(107deg); }
 .menu-item:nth-child(4) { transform: rotate(-67deg) translate(100px) rotate(65deg); }
+
+/* Position des icônes en bas à gauche en desktop */
+@media (min-width: 1024px) {
+  .menu-item:nth-child(1) { transform: rotate(70deg) translate(100px) rotate(-70deg); }
+  .menu-item:nth-child(2) { transform: rotate(110deg) translate(100px) rotate(-110deg); }
+  .menu-item:nth-child(3) { transform: rotate(150deg) translate(100px) rotate(-150deg); }
+  .menu-item:nth-child(4) { transform: rotate(190deg) translate(100px) rotate(-190deg); }
+}
 </style>

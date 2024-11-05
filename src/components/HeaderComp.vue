@@ -25,8 +25,8 @@ defineProps({
   bottom: 0; /* Positionne le header en bas de l’écran */
   width: 100%;
   height: 15vh;
-  padding: 15px;
-  background: rgba(255, 255, 255, 0.9);
+  padding: 15px 3rem;
+  background: #E1E1E1;
   display: flex;
   align-items: center;
   justify-content: space-between; /* Place RadialNav à droite */
@@ -45,15 +45,29 @@ defineProps({
   margin-right: 10px;
 }
 
-.header-title {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #444;
-  margin: 0;
-}
-
 .radial-nav {
   position: relative;
-  right: 10px; /* Ajuste la position */
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header {
+    height: 12vh; /* Ajuste la hauteur pour les tablettes */
+    padding: 15px 3rem; /* Ajuste le padding */
+  }
+
+  .logo {
+    width: 35px; /* Ajuste la taille du logo pour tablette */
+  }
+}
+
+@media (min-width: 1025px) {
+  /* Styles pour les grands écrans (desktop) */
+  .header {
+    top: 0; /* Positionne le header en bas de l’écran */
+  }
+
+  .logo {
+    width: 40px; /* Taille standard pour desktop */
+  }
 }
 </style>

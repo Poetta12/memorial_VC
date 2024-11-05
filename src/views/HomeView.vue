@@ -8,9 +8,8 @@
         Ce mémorial est un hommage à une vie pleine de souvenirs, de joie et de sagesse.
       </p>
     </div>
+    <!-- Header -->
 
-    <!-- Header en bas de page -->
-    <HeaderComp :initials="'Vitor Costa'" />
   </div>
 </template>
 
@@ -26,9 +25,9 @@ import HeaderComp from "@/components/HeaderComp.vue";
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 85vh;
   overflow: hidden;
-  background-image: url('@/assets/landscape.jpg'); /* Image symbolique en fond */
+  background-image: url('/img/landscape.webp');
   background-size: cover;
   background-position: center;
 }
@@ -56,7 +55,7 @@ import HeaderComp from "@/components/HeaderComp.vue";
   font-size: 2em;
   font-weight: bold;
   margin: 0;
-  font-family: 'Georgia', serif; /* Police élégante pour un effet mémorial */
+  font-family: 'Georgia', serif;
 }
 
 .dedication-text {
@@ -72,10 +71,62 @@ import HeaderComp from "@/components/HeaderComp.vue";
   line-height: 1.6;
 }
 
-/* Header en bas */
+/* Header en bas pour mobile */
 .header {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+/* Styles pour les écrans plus grands */
+@media (min-width: 768px) {
+  .hero-section {
+    padding: 30px;
+    max-width: 700px; /* Limite la largeur de la section pour une lecture facile */
+  }
+
+  .welcome-text {
+    font-size: 2.5em; /* Agrandit le titre pour remplir l’espace */
+  }
+
+  .dedication-text {
+    font-size: 1.5em; /* Texte de dédicace plus grand */
+  }
+
+  .intro-text {
+    font-size: 1.2em;
+    max-width: 85%;
+  }
+}
+
+/* Header en haut pour desktop */
+@media (min-width: 1024px) {
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .hero-section {
+    padding: 40px;
+    max-width: 900px;
+  }
+
+  .welcome-text {
+    font-size: 3em;
+  }
+
+  .dedication-text {
+    font-size: 1.8em;
+  }
+
+  .intro-text {
+    font-size: 1.3em;
+    max-width: 70%;
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.3); /* Légèrement plus clair sur grand écran */
+  }
 }
 </style>

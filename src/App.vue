@@ -1,71 +1,49 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-</script>
-
 <template>
-  <RouterView />
+  <div id="app-container">
+    <HeaderComp :initials="'Vitor Costa'" />
+    <div id="app-container-body">
+      <RouterView />
+    </div>
+  </div>
 </template>
 
+<script setup>
+import HeaderComp from "@/components/HeaderComp.vue";
+import { RouterView } from 'vue-router';
+</script>
+
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
+#app-container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+  min-height: 100vh; /* Assure que l'application remplit tout l'écran */
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+#app-container-body {
+  max-width: 1280px; /* Largeur maximale de l'application */
+  margin: 0 auto; /* Centre l'application */
+  padding: 20px; /* Ajoute un padding pour espacer le contenu des bords */
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #app-container-body {
+    padding: 10px; /* Réduit le padding pour mobile */
   }
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
+@media (min-width: 769px) and (max-width: 1024px) {
+  #app-container-body {
+    padding: 15px; /* Ajuste le padding pour les tablettes */
   }
+}
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+@media (min-width: 1025px) {
+  #app-container-body {
+    margin-top: 15vh;
+    padding-top: 0; /* Ajoute un padding pour espacer le contenu des bords */
+    padding-bottom: 0; /* Ajoute un padding pour espacer le contenu des bords */
   }
 }
 </style>
