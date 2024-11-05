@@ -32,8 +32,8 @@ defineProps({
   justify-content: space-between; /* Place RadialNav à droite */
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  border-bottom: 1px solid beige;
-  border-radius: 0 0 10px 10px;
+  border-top: 1px solid beige;
+  border-radius: 10px 10px 0 0;
 }
 
 .logo-container {
@@ -66,6 +66,9 @@ defineProps({
   /* Styles pour les grands écrans (desktop) */
   .header {
     top: 0; /* Positionne le header en bas de l’écran */
+    border: none;
+    border-bottom: 1px solid beige;
+    border-radius: 0 0 10px 10px;
   }
 
   .logo {
