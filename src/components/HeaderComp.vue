@@ -26,12 +26,14 @@ defineProps({
   width: 100%;
   height: 15vh;
   padding: 15px 3rem;
-  background: #E1E1E1;
+  background: #181818;
   display: flex;
   align-items: center;
   justify-content: space-between; /* Place RadialNav à droite */
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  border-bottom: 1px solid beige;
+  border-radius: 0 0 10px 10px;
 }
 
 .logo-container {
