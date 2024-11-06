@@ -83,7 +83,7 @@ const navigateTo = (route) => {
 }
 
 .menu.active {
-  display: flex; /* Affiché uniquement lorsque `isOpen` est vrai */
+  display: flex; /* Affiché uniquement lorsque isOpen est vrai */
 }
 
 .menu-item {
@@ -102,21 +102,13 @@ const navigateTo = (route) => {
   transition: transform 0.8s, box-shadow 0.3s; /* Ajoute une transition pour l'ombre */
   border: 2px solid rgba(255, 215, 0, 0.8); /* Bordure lumineuse pour les icônes */
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(173, 216, 230, 0.7); /* Ombre céleste pour les icônes */
-  opacity: 0; /* Commence invisible */
-  transform: scale(0); /* Commence à l'échelle 0 pour l'animation */
-}
-
-/* Animation pour faire apparaître les éléments du menu */
-.menu.active .menu-item {
-  opacity: 1; /* Rendre visible */
-  transform: scale(1); /* Échelle normale pour l'animation */
 }
 
 /* Positions spécifiques pour chaque icône en mobile */
-.menu.active .menu-item:nth-child(1) { transform: rotate(-190deg) translate(120px) rotate(190deg); }
-.menu.active .menu-item:nth-child(2) { transform: rotate(-150deg) translate(120px) rotate(150deg); }
-.menu.active .menu-item:nth-child(3) { transform: rotate(-110deg) translate(120px) rotate(110deg); }
-.menu.active .menu-item:nth-child(4) { transform: rotate(-70deg) translate(120px) rotate(70deg); }
+.menu-item:nth-child(1) { transform: rotate(-190deg) translate(120px) rotate(190deg); }
+.menu-item:nth-child(2) { transform: rotate(-150deg) translate(120px) rotate(150deg); }
+.menu-item:nth-child(3) { transform: rotate(-110deg) translate(120px) rotate(110deg); }
+.menu-item:nth-child(4) { transform: rotate(-70deg) translate(120px) rotate(70deg); }
 
 /* Position des icônes en bas à gauche en desktop */
 @media (min-width: 1024px) {
