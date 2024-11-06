@@ -52,8 +52,8 @@ const navigateTo = (route) => {
 }
 
 .center-button {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-color: #f5f5dc; /* Couleur beige */
   display: flex;
@@ -68,8 +68,8 @@ const navigateTo = (route) => {
 }
 
 .center-logo {
-  width: 30px;
-  height: 30px;
+  width: 75px;
+  height: 75px;
 }
 
 .menu {
@@ -88,8 +88,8 @@ const navigateTo = (route) => {
 
 .menu-item {
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 75px;
+  height: 75px;
   background: linear-gradient(135deg, rgba(173, 216, 230, 0.8), rgba(255, 255, 255, 0.3)); /* Dégradé céleste */
   color: #333;
   font-weight: bolder;
@@ -98,23 +98,53 @@ const navigateTo = (route) => {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   transition: transform 0.8s, box-shadow 0.3s; /* Ajoute une transition pour l'ombre */
   border: 2px solid rgba(255, 215, 0, 0.8); /* Bordure lumineuse pour les icônes */
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(173, 216, 230, 0.7); /* Ombre céleste pour les icônes */
+  opacity: 0; /* Commence invisible */
+  transform: scale(0); /* Commence à l'échelle 0 pour l'animation */
+}
+
+/* Animation pour faire apparaître les éléments du menu */
+.menu.active .menu-item {
+  opacity: 1; /* Rendre visible */
+  transform: scale(1); /* Échelle normale pour l'animation */
 }
 
 /* Positions spécifiques pour chaque icône en mobile */
-.menu-item:nth-child(1) { transform: rotate(-190deg) translate(100px) rotate(-170deg); }
-.menu-item:nth-child(2) { transform: rotate(-150deg) translate(100px) rotate(-210deg); }
-.menu-item:nth-child(3) { transform: rotate(-108deg) translate(100px) rotate(107deg); }
-.menu-item:nth-child(4) { transform: rotate(-67deg) translate(100px) rotate(65deg); }
+.menu.active .menu-item:nth-child(1) { transform: rotate(-190deg) translate(120px) rotate(190deg); }
+.menu.active .menu-item:nth-child(2) { transform: rotate(-150deg) translate(120px) rotate(150deg); }
+.menu.active .menu-item:nth-child(3) { transform: rotate(-110deg) translate(120px) rotate(110deg); }
+.menu.active .menu-item:nth-child(4) { transform: rotate(-70deg) translate(120px) rotate(70deg); }
 
 /* Position des icônes en bas à gauche en desktop */
 @media (min-width: 1024px) {
-  .menu-item:nth-child(1) { transform: rotate(70deg) translate(100px) rotate(-70deg); }
-  .menu-item:nth-child(2) { transform: rotate(110deg) translate(100px) rotate(-110deg); }
-  .menu-item:nth-child(3) { transform: rotate(150deg) translate(100px) rotate(-150deg); }
-  .menu-item:nth-child(4) { transform: rotate(190deg) translate(100px) rotate(-190deg); }
+  .menu-item:nth-child(1) { transform: rotate(70deg) translate(110px) rotate(-70deg); }
+  .menu-item:nth-child(2) { transform: rotate(110deg) translate(110px) rotate(-110deg); }
+  .menu-item:nth-child(3) { transform: rotate(150deg) translate(110px) rotate(-150deg); }
+  .menu-item:nth-child(4) { transform: rotate(190deg) translate(110px) rotate(-190deg); }
+
+  .center-button {
+    width: 75px;
+    height: 75px;
+  }
+
+  .center-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .menu-item {
+    cursor: pointer;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+  }
+
+  .menu-item:hover {
+    background: linear-gradient(135deg, rgba(173, 216, 230, 0.8), rgba(0, 0, 0, 0.3));
+    color: beige;
+  }
 }
 </style>

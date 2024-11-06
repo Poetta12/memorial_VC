@@ -25,7 +25,7 @@ defineProps({
   bottom: 0; /* Positionne le header en bas de l’écran */
   width: 100%;
   height: 15vh;
-  padding: 15px 3rem;
+  padding: 15px 2rem;
   background: #181818;
   display: flex;
   align-items: center;
@@ -42,7 +42,7 @@ defineProps({
 }
 
 .logo {
-  width: 40px;
+  width: 75px;
   height: auto;
   margin-right: 10px;
 }
