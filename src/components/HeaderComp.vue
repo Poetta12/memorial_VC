@@ -42,7 +42,7 @@ defineProps({
 }
 
 .logo {
-  width: 75px;
+  width: 150px;
   height: auto;
   margin-right: 10px;
 }
