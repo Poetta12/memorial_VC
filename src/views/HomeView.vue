@@ -62,11 +62,12 @@ import HeaderComp from "@/components/HeaderComp.vue";
 
 .home {
   position: relative;
+  margin-top: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 85vh;
+  height: 80vh;
   overflow: hidden;
   background-image: url('/img/landscape.webp');
   background-size: cover;
