@@ -62,7 +62,7 @@ import HeaderComp from "@/components/HeaderComp.vue";
 
 .home {
   position: relative;
-  margin-top: 5vh;
+  margin-top: 3vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -169,6 +169,7 @@ import HeaderComp from "@/components/HeaderComp.vue";
 @media (min-width: 1024px) {
   .home {
     border-radius: 0;
+    margin-top: 0;
   }
 
   .hero-section {
