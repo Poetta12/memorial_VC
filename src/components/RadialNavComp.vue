@@ -52,8 +52,8 @@ const navigateTo = (route) => {
 }
 
 .center-button {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   background-color: #f5f5dc; /* Couleur beige */
   display: flex;
@@ -68,8 +68,8 @@ const navigateTo = (route) => {
 }
 
 .center-logo {
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
 }
 
 .menu {
@@ -88,8 +88,8 @@ const navigateTo = (route) => {
 
 .menu-item {
   position: absolute;
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
   background: linear-gradient(135deg, rgba(173, 216, 230, 0.8), rgba(255, 255, 255, 0.3)); /* Dégradé céleste */
   color: #333;
   font-weight: bolder;
