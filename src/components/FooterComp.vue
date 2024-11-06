@@ -48,7 +48,7 @@ footer {
 
 .footer-content p {
   margin: 0; /* Élimine le margin par défaut */
-  font-size: 1rem; /* Taille de police pour le texte */
+  font-size: .6rem; /* Taille de police pour le texte */
   letter-spacing: 1px; /* Espacement entre les lettres */
 }
 
